@@ -20,6 +20,13 @@ namespace PingStats
 		{
 			File.Create(name + extension);
 		}
+
+		// overload to create a file in a set working directory
+		public void CreateFile(string name, string extension, string wd)
+		{
+			// todo: this :D 
+		}
+
 		public void WriteToFile(string File, string content)
 		{
 			using (StreamWriter s = new StreamWriter(File))
@@ -27,15 +34,10 @@ namespace PingStats
 				s.WriteLine(content);
 			}
 		}
-		// overload to create a file in a set working directory
-		public void CreateFile(string name , string extension, string wd)
-		{
-			// todo: this :D 
-		}
-
+	
 		internal void ChangeFileExten(string path, string newExten)
 		{
-	        File.Move(path, Path.ChangeExtension(path, newExten));
+			File.Move(path, Path.ChangeExtension(path, newExten));
 		}
 
 
@@ -55,7 +57,7 @@ namespace PingStats
 
 				for (int i = 0; i < files.Length; i++)
 				{
-					if (files[i].ToString().Contains(".txt"))					
+					if (files[i].ToString().Contains(".json"))					
 						TextFiles.Add((files[i].ToString()));					
 				}
 

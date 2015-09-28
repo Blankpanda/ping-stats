@@ -34,12 +34,17 @@ namespace PingStats
 
 		// checks if the inputed string is a domain name
 
-		public static void IsDomainName(string dnString)
+		public static bool IsDomainName(string dnString)
 		{
+			IPHostEntry ipHost = Dns.Resolve(dnString);
 
-			IPHostEntry x = Dns.Resolve(dnString);
-			Console.WriteLine(x.AddressList[0]);
+			if (ipHost.AddressList.Length >= -1)
+			{
+				return true;
+			}
 
+			return false;
+			
 		}
 	}
 }
