@@ -42,7 +42,7 @@ namespace PingStats
 
 
 		/// <summary>
-		/// creates a text fileText File
+		/// creates a text File
 		/// </summary>
 		/// <returns></returns>
 		public string CreateFileName()
