@@ -7,3 +7,11 @@ C:\Users\CalebsComp\Documents\Visual Studio 2013\Projects\CS\PingStats\PingStats
 C:\Users\CalebsComp\Documents\Visual Studio 2013\Projects\CS\PingStats\PingStats\obj\Debug\PingStats.pdb
 C:\Users\CalebsComp\Documents\Visual Studio 2013\Projects\CS\PingStats\PingStats\bin\Debug\Newtonsoft.Json.dll
 C:\Users\CalebsComp\Documents\Visual Studio 2013\Projects\CS\PingStats\PingStats\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Cellis\Desktop\Projects\ping-stats\PingStats\bin\Debug\PingStats.exe.config
+C:\Users\Cellis\Desktop\Projects\ping-stats\PingStats\obj\Debug\PingStats.exe
+C:\Users\Cellis\Desktop\Projects\ping-stats\PingStats\obj\Debug\PingStats.pdb
+C:\Users\Cellis\Desktop\Projects\ping-stats\PingStats\bin\Debug\PingStats.exe
+C:\Users\Cellis\Desktop\Projects\ping-stats\PingStats\bin\Debug\PingStats.pdb
+C:\Users\Cellis\Desktop\Projects\ping-stats\PingStats\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Cellis\Desktop\Projects\ping-stats\PingStats\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Cellis\Desktop\Projects\ping-stats\PingStats\obj\Debug\PingStats.csprojResolveAssemblyReference.cache
