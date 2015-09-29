@@ -27,9 +27,9 @@ namespace PingStats
 			// todo: this :D 
 		}
 
-		public void WriteToFile(string File, string content)
+		public void WriteToFile(string file, string content)
 		{
-			using (StreamWriter s = new StreamWriter(File))
+			using (StreamWriter s = new StreamWriter(file))
 			{
 				s.WriteLine(content);
 			}
