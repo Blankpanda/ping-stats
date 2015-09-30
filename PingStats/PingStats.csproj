@@ -46,10 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FileWriter.cs" />
-    <Compile Include="Json.cs" />
-    <Compile Include="Net.cs" />
-    <Compile Include="Pinger.cs" />
+    <Compile Include="source\FileWriter.cs" />
+    <Compile Include="source\Json.cs" />
+    <Compile Include="source\Net.cs" />
+    <Compile Include="source\Pinger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

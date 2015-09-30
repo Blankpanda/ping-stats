@@ -100,16 +100,10 @@ namespace PingStats
 		  
 			// Use Json.net to organinze a string into json using a list and then create a .json file.
 			string json = Json.FormatJson(reps);
-			Json.CreateNewJsonFile(json);
+			Json.CreateNewJsonFile(inAddress,json);
 
 			// TODO: we need to get the address/domain name thats being pinged and either put it into a different file or make it the header of the normal json file.
 
-			// create a parallel file that contains information to build the graph.
-			//FileWriter writer = new FileWriter();
-			//string file = writer.CreateFileName();
-			//file = file + "_info"; // we need to signify that this is a different file
-			//writer.WriteToFile(file,inAddress);
-			
 
 			Console.ReadLine();
 	   }

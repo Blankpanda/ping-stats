@@ -16,17 +16,19 @@ namespace PingStats
             return json;
         }
 
-        internal static void CreateNewJsonFile(string json)
+        internal static void CreateNewJsonFile(string filename, string json)
         {
             // write the formatted JSON to a created file.
             FileWriter writer = new FileWriter();
 
-            string writeFile = writer.CreateFileName();
-            writer.WriteToFile(writeFile, json);
+            string writeFile = writer.CreateFileName(filename); // new filename
+            writer.WriteToFile(writeFile, json); // writes the contents of the the json string to a file.
 
             // change the file to JSON format
-            writer.ChangeFileExten(writeFile, ".json");
+            writer.ChangeFileExten(writeFile, ".json");  // the file starts off as a .txt but we convert it to a json file.
             
         }
+
+ 
     }
 }
