@@ -12,7 +12,7 @@ namespace PingStats
 	   {
 			Pinger p = new Pinger(); // object of Pinger.cs to get replies and ping addressess
 			List<long> reps = new List<long>(); // list of replies
-			List<System.Net.NetworkInformation.IPStatus> status = new List<System.Net.NetworkInformation.IPStatus>();
+			List<System.Net.NetworkInformation.IPStatus> ipStatus = new List<System.Net.NetworkInformation.IPStatus>();
 
 
 			// user entry
@@ -90,22 +90,67 @@ namespace PingStats
 			// Cast inPingAmount to a long
 			PingAmount = long.Parse(inPingAmount);
 
-			while (reps.Count <= PingAmount)
+			while (reps.Count < PingAmount)
 			{
 				p.PingAddress(inAddress); // send a ICMP message
 				reps = p.Replies;  // populate the list with the replies
+				ipStatus = p.Responses;
 				Console.WriteLine("Ping #" + reps.Count + " (status): " + p.Responses[reps.Count - 1]); // track the ICMP requests in console.                                                                
 			}
 
-		  
+			FileWriter writer = new FileWriter();
+			string msFileName = writer.CreateFileName(inAddress);
+
 			// Use Json.net to organinze a string into json using a list and then create a .json file.
-			string json = Json.FormatJson(reps);
-			Json.CreateNewJsonFile(inAddress,json);
+			string msData = Json.FormatJson(reps);			
+			writer.WriteToFile(msFileName,msData);
+			writer.ChangeFileExten(msFileName, ".json");
 
-			// TODO: we need to get the address/domain name thats being pinged and either put it into a different file or make it the header of the normal json file.
+			// Use Json.net to create a string that is parallel with the first json file that tracks the reply data
+			
+			// we need to populate the file with string values not IPStatus instances
+			List<string> status = new List<string>();
+			System.Net.NetworkInformation.IPStatus isSucess  = System.Net.NetworkInformation.IPStatus.Success;
+			System.Net.NetworkInformation.IPStatus isFailure = System.Net.NetworkInformation.IPStatus.TimedOut;
+			
+			for (int i = 0; i < ipStatus.Count; i++)
+			{
+				if (ipStatus[i] == isSucess )				
+					status.Add("Success");				
+				else if (ipStatus[i] == isFailure)				
+					status.Add("Fail");				
+				else				
+					status.Add("Other");
+				
+				
+			}
 
+			string resultData = Json.FormatJson(status);
+
+			// I really hate this			
+			string ResultFileName = ReverseString(msFileName);
+			ResultFileName = ResultFileName + "_" + ReverseString("status");
+			ResultFileName = ReverseString(ResultFileName);
+
+			writer.WriteToFile(ResultFileName, resultData);
+			writer.ChangeFileExten(ResultFileName, ".json");
 
 			Console.ReadLine();
 	   }
+
+		private static string ReverseString(string FileName)
+		{
+			char[] cs = FileName.ToCharArray();
+			Array.Reverse(cs);
+			string NewName = "";
+
+			for (int i = 0; i < cs.Length; i++)
+			{
+				NewName += cs[i]; // YEEEAAAAH
+			}
+			return NewName;
+		}
 	}
 }
+
+

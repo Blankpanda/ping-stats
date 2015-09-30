@@ -13,7 +13,12 @@ namespace PingStats
         internal static string FormatJson(List<long> items)
         {
             string json = JsonConvert.SerializeObject(items.ToArray() , Formatting.Indented);
-            return json;
+                return json;
+        }
+        internal static string FormatJson(List<string> items)
+        {
+            string json = JsonConvert.SerializeObject(items.ToArray(), Formatting.Indented);
+                return json;
         }
 
         internal static void CreateNewJsonFile(string filename, string json)
