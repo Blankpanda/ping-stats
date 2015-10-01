@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -134,6 +135,10 @@ namespace PingStats
 
 			writer.WriteToFile(ResultFileName, resultData);
 			writer.ChangeFileExten(ResultFileName, ".json");
+
+			// run a R script with params
+			RunRScript.RunFromCmd("GraphJson.R",)
+			
 
 			Console.ReadLine();
 	   }
