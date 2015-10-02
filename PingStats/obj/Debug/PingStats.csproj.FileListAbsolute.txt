@@ -15,9 +15,3 @@ C:\Users\Cellis\Desktop\Projects\ping-stats\PingStats\bin\Debug\PingStats.pdb
 C:\Users\Cellis\Desktop\Projects\ping-stats\PingStats\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Cellis\Desktop\Projects\ping-stats\PingStats\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Cellis\Desktop\Projects\ping-stats\PingStats\obj\Debug\PingStats.csprojResolveAssemblyReference.cache
-C:\Users\Cellis\Desktop\Projects\ping-stats\PingStats\bin\Debug\DynamicInterop.dll
-C:\Users\Cellis\Desktop\Projects\ping-stats\PingStats\bin\Debug\RDotNet.dll
-C:\Users\Cellis\Desktop\Projects\ping-stats\PingStats\bin\Debug\RDotNet.NativeLibrary.dll
-C:\Users\Cellis\Desktop\Projects\ping-stats\PingStats\bin\Debug\DynamicInterop.xml
-C:\Users\Cellis\Desktop\Projects\ping-stats\PingStats\bin\Debug\RDotNet.xml
-C:\Users\Cellis\Desktop\Projects\ping-stats\PingStats\bin\Debug\RDotNet.NativeLibrary.xml

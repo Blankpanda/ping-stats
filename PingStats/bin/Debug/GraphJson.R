@@ -10,8 +10,8 @@ if (!is.null(WD)) setwd(WD)
 
 
 # retrieve JSON information
-pingStats <- fromJSON("Debug/google.com_0.json")
-statusStats <- fromJSON("Debug/status_google.com_0.json")
+pingStats <- fromJSON("Debug/pixiv.com_0.json")
+statusStats <- fromJSON("Debug/status_pixiv.com_0.json")
 
 stats <- data.frame(pingStats) # convert the data to a data.frame
 status <- data.frame(statusStats)
