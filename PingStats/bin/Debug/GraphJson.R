@@ -1,7 +1,17 @@
+
+.libPaths("C:/Users/Cellis/Documents/R/win-library/3.2")
+require(jsonlite)
+require(ggplot2)
 library(jsonlite)
 library(ggplot2)
-pingStats <- fromJSON("bin/Debug/google.com_0.json")
-statusStats <- fromJSON("bin/Debug/status_google.com_0.json")
+
+WD <- getwd() # set the working directory to the project folder
+if (!is.null(WD)) setwd(WD)
+
+
+# retrieve JSON information
+pingStats <- fromJSON("Debug/google.com_0.json")
+statusStats <- fromJSON("Debug/status_google.com_0.json")
 
 stats <- data.frame(pingStats) # convert the data to a data.frame
 status <- data.frame(statusStats)

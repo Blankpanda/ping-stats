@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RDotNet.NativeLibrary;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -134,11 +135,7 @@ namespace PingStats
 			ResultFileName = ReverseString(ResultFileName);
 
 			writer.WriteToFile(ResultFileName, resultData);
-			writer.ChangeFileExten(ResultFileName, ".json");
-
-			// run a R script with params
-			RunRScript.RunFromCmd("GraphJson.R",)
-			
+			writer.ChangeFileExten(ResultFileName, ".json");			
 
 			Console.ReadLine();
 	   }

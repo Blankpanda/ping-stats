@@ -5,12 +5,16 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RDotNet.Devices;
+using RDotNet;
+using RDotNet.NativeLibrary;
 
 namespace PingStats
 {
     class RunRScript
     {
 
+        // D-D-D-D-Deprecated
         public static string RunFromCmd(string ScriptPath, string ScriptExecPath)
         {
             string file = ScriptPath;
@@ -44,5 +48,16 @@ namespace PingStats
             }
         }
 
+        public static void RunScript()
+        {
+            string RPath = @"C:\Program Files\R\R-3.2.2\bin\x64";
+            REngine.SetEnvironmentVariables();
+            REngine Engine = REngine.GetInstance();
+
+        
+            Engine.Evaluate("source('GraphJson.R')");
+
+     
+        }
     }
 }
