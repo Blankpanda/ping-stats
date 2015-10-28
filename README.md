@@ -18,7 +18,7 @@ this can be achieve by editng the FromJSON() functions.
 
 ```
   pingStats <- fromJSON("Debug/ *json output file*  ")
-  statusStats <- fromJSON("Debug/ *status json output file* "
+  statusStats <- fromJSON("Debug/ *status json output file* ")
 ```
 
 output files are paired together by numbers.
